@@ -6,7 +6,7 @@ import requests
 import json
 
 from sqlalchemy import create_engine 
-engine = create_engine('sqlite:///banco.db', echo=True)
+engine = create_engine('sqlite:///4_scripts/banco.db', echo=True)
 connection = engine.raw_connection()
 
 df = pd.read_sql('SELECT * FROM banco', con=connection) 
